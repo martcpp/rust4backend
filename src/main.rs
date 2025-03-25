@@ -8,12 +8,13 @@ async fn index(req:HttpRequest) -> impl Responder {
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
+    println!("Server started at http://localhost:8080");
     HttpServer::new(|| {
         App::new()
             .route("/", web::get().to(index))
             .route("/{name}", web::get().to(index))
     })
-    .bind("127.0.0.1:8080")?
+    .bind("localhost:3000")?
     .run()
     .await
    

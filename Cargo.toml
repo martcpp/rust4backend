@@ -2,8 +2,19 @@
 name = "rust4backend"
 version = "0.1.0"
 edition = "2021"
-license = "MIT"
+license = "MIT or Apache-2.0"
+description = "A simple backend written in Rust"
+readme = "README.md"
+repository = "git@github.com:martcpp/rust4backend.git"
+keywords = ["rust", "backend", "actix-web"]
+authors = ["Mordecai Etukudo <mordecaiemmanueletukudo@gmail.com>"]
+categories = ["web-programming", "network-programming"]
+
+
+
+
 
 [dependencies]
 actix-web = "4"
 tokio = { version = "1", features = ["full"] }
+
