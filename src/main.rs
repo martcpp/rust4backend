@@ -1,7 +1,7 @@
-use actix_web::{web, App, HttpServer, Responder,HttpResponse,HttpRequest};
+#[allow(unused_imports)]
+use actix_web::{web, App, HttpRequest, HttpResponse, HttpServer, Responder};
 
-
-async fn index(req:HttpRequest) -> impl Responder {
+async fn index(req: HttpRequest) -> impl Responder {
     let name = req.match_info().get("name").unwrap_or("World");
     format!("Hello {}!", &name)
 }
@@ -17,5 +17,4 @@ async fn main() -> std::io::Result<()> {
     .bind("localhost:3000")?
     .run()
     .await
-   
 }

@@ -20,4 +20,5 @@ target/
 
 /target
 
-.cargo/
+
+*.profraw
